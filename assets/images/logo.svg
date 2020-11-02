@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="75" viewBox="0 0 320 75">
+  <g id="Grupo_3" data-name="Grupo 3" transform="translate(-369 875)">
+    <g id="diaphragm" transform="translate(369 -869.403)">
+      <g id="Grupo_1" data-name="Grupo 1">
+        <path id="Caminho_1" data-name="Caminho 1" d="M31.474,0A31.329,31.329,0,0,1,49.989,6.022L1.523,41.165A31.491,31.491,0,0,1,31.474,0Z" transform="translate(0)" fill="#10957c"/>
+        <path id="Caminho_2" data-name="Caminho 2" d="M12.974,48.893l18.5,56.936a31.474,31.474,0,0,1-18.5-56.936Z" transform="translate(0 -42.882)" fill="#27ae60"/>
+        <path id="Caminho_3" data-name="Caminho 3" d="M72.36,335.121a31.483,31.483,0,0,1-59.879,0Z" transform="translate(-10.947 -293.92)" fill="#55e793"/>
+        <path id="Caminho_4" data-name="Caminho 4" d="M256,335.121v21.746a31.486,31.486,0,0,0,29.939-21.746Z" transform="translate(-224.526 -293.92)" fill="#10957c"/>
+        <path id="Caminho_5" data-name="Caminho 5" d="M274.5,48.893,256,105.829a31.474,31.474,0,0,0,18.5-56.936Z" transform="translate(-224.526 -42.882)" fill="#27ae60"/>
+        <path id="Caminho_6" data-name="Caminho 6" d="M256,0V19.447l29.951,21.718A31.491,31.491,0,0,0,256,0Z" transform="translate(-224.526)" fill="#0fb594"/>
+        <path id="Caminho_7" data-name="Caminho 7" d="M256,0a31.329,31.329,0,0,1,18.515,6.022L256,19.447Z" transform="translate(-224.526)" fill="#27ae60"/>
+      </g>
+    </g>
+    <text id="PhotoArt" transform="translate(442 -817)" fill="#10957c" font-size="60" font-family="BookAntiqua, Book Antiqua"><tspan x="0" y="0">PhotoArt</tspan></text>
+  </g>
+</svg>
