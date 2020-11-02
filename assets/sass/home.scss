@@ -1,0 +1,110 @@
+#landing {
+    width: 100%;
+    height: 550px;
+    .container {
+        background-image: url('../images/lights.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .5);
+            justify-content: center;
+            .content {
+                width: 100%;
+                max-width: 720px;
+                padding: 0 var(--space);
+                color: var(--white);
+                flex-direction: column;
+                h1 {
+                    font-size: 26px;
+                    font-weight: 600;
+                    text-align: center;
+                }   
+                .description {
+                    font-size: 16px;
+                    margin-top: 0;
+                }
+                .services {
+                    margin-bottom: var(--space);
+                    .service {
+                        flex: 1;
+                        flex-direction: column;
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        div {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+                a {
+                    @include call-to-action;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
+
+#call-to-pages {
+    margin-top: calc(var(--space) * 3);
+    .container {
+        flex-direction: column;
+        align-items: center;
+        .call-services {
+            margin-top: calc(var(--space) * 2);
+            width: 100%;
+            max-width: 550px;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                color: var(--green);
+                font-size: 26px;
+                font-weight: 600;
+                margin: 0;
+                margin-bottom: var(--space);
+            }
+            p {
+                color: var(--dark);
+                font-size: 16px;
+            }
+            a {
+                @include call-to-action;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #landing {
+        .container {
+            .overlay {
+                .content {
+                    h1 {
+                        font-size: 32px;
+                    }
+                    .description {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    #call-to-pages {
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: initial;
+            .call-services {
+                margin-top: 0;
+                margin-left: var(--space);
+            }
+        }
+    }
+}

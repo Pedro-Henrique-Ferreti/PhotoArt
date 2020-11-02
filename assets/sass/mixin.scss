@@ -1,5 +1,6 @@
 @mixin button {
     border: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,4 +8,26 @@
     outline: none;
     cursor: pointer;
     background: transparent;
+}
+
+@mixin call-to-action {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background-color: var(--blue);
+    &:hover {
+        background-color: var(--blue-3);
+    }
 }

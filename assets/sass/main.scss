@@ -1,7 +1,19 @@
+// Default files
 @import 'variables.scss';
 @import 'fonts.scss';
 @import 'default.scss';
-
 @import 'mixin.scss';
 
+// Component-like files
 @import 'header.scss';
+@import 'form.scss';
+@import 'budget-form.scss';
+@import 'newsletter.scss';
+@import 'footer.scss';
+
+// Homepage files
+@import 'home.scss';
+@import 'service-example.scss';
+
+// Portifolio page files 
+@import 'portifolio.scss';
