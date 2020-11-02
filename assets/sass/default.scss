@@ -9,9 +9,22 @@ body, div, aside, footer, header, main, nav, section, ul, ol, li, figure, pictur
     display: flex;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
     border: 0;
     flex-direction: column;
+
+    .container {
+        width: 100%;
+        max-width: 1240px;
+        height: 100%;
+        padding: 0 var(--space);
+        margin: 0 auto;
+    }
 }

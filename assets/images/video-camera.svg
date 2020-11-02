@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79" height="50.786" viewBox="0 0 79 50.786">
+  <g id="video-camera" transform="translate(0 -85.333)">
+    <g id="Grupo_77" data-name="Grupo 77" transform="translate(0 85.333)">
+      <g id="Grupo_76" data-name="Grupo 76" transform="translate(0 0)">
+        <path id="Caminho_50" data-name="Caminho 50" d="M77.663,91.4a2.822,2.822,0,0,0-2.745-.124l-18.489,9.246V93.8a8.464,8.464,0,0,0-8.464-8.464H8.464A8.464,8.464,0,0,0,0,93.8v33.857a8.464,8.464,0,0,0,8.464,8.464h39.5a8.464,8.464,0,0,0,8.464-8.464v-6.721l18.489,9.26A2.822,2.822,0,0,0,79,127.654V93.8A2.821,2.821,0,0,0,77.663,91.4ZM50.786,127.654a2.821,2.821,0,0,1-2.821,2.821H8.464a2.821,2.821,0,0,1-2.821-2.821V93.8a2.821,2.821,0,0,1,2.821-2.821h39.5A2.821,2.821,0,0,1,50.786,93.8v33.857Zm22.571-4.565-16.929-8.464v-7.8l16.929-8.464Z" transform="translate(0 -85.333)" fill="#0a6ba1"/>
+      </g>
+    </g>
+    <g id="Grupo_79" data-name="Grupo 79" transform="translate(16.929 99.44)">
+      <g id="Grupo_78" data-name="Grupo 78" transform="translate(0 0)">
+        <path id="Caminho_51" data-name="Caminho 51" d="M113.686,170.667a11.286,11.286,0,1,0,11.286,11.286A11.286,11.286,0,0,0,113.686,170.667Zm0,16.929a5.643,5.643,0,1,1,5.643-5.643A5.643,5.643,0,0,1,113.686,187.6Z" transform="translate(-102.4 -170.667)" fill="#0a6ba1"/>
+      </g>
+    </g>
+  </g>
+</svg>
