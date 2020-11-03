@@ -1,0 +1,50 @@
+#error-404 {
+    .container {
+        max-width: 790px;
+        margin-top: calc(var(--space) * 3);
+        justify-content: space-between;
+        position: relative;
+        img {
+            width: 129px;
+            height: 237px;
+        }
+        div {
+            flex-direction: column;
+            margin-left: var(--space);
+            align-items: center;
+            h1 {
+                color: var(--green);
+                font-size: 26px;
+                margin-top: 0;
+                text-align: center;
+            }
+            p {
+                color: var(--dark);
+                margin-bottom: calc(var(--space) * 2);
+                text-align: center;
+            }
+            a {
+                @include call-to-action;
+                position: absolute;
+                bottom: -50px;
+                left: calc(50% - 150px);
+            }
+        }
+    }
+}
+
+@media (min-width: 550px) {
+    #error-404 {
+        .container {
+            img {
+                width: initial;
+                height: initial;
+            }
+            div {
+                a {
+                    position: initial;
+                }
+            }
+        }
+    }
+}

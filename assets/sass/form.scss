@@ -24,6 +24,10 @@ form.default {
                     color: var(--gray-3);
                 }
             }
+            textarea {
+                resize: none;
+                height: 200px;
+            }
             button[type=submit] {
                 @include call-to-action;
                 align-self: center;

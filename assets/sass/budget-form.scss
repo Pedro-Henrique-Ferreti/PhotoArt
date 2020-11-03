@@ -12,5 +12,15 @@
     p {
         color: var(--dark);
         font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .budget-form {
+        p {
+
+            text-align: left;
+        }
     }
 }
