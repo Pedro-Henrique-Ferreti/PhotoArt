@@ -37,6 +37,10 @@
                     max-width: 375px;
                     height: auto;
                     margin-bottom: var(--space);
+                    transition: transform .3s;
+                    &:hover {
+                        transform: scale(1.05)
+                    }
                 }
             }
         }

@@ -11,8 +11,11 @@
             align-items: center;
             > div {
                 width: 100%;
-                max-width: 575px;
+                max-width: 600px;
                 flex-direction: column;
+                &.image {
+                    max-width: 725px;
+                }
                 > img {
                     width: 100%;
                     height: auto;
@@ -26,6 +29,7 @@
                 p {
                     color: var(--dark);
                     font-size: 16px;
+                    text-align: justify;
                 }
                 ul {
                     color: var(--dark);
@@ -74,7 +78,10 @@
             > section {
                 justify-content: space-between;
                 flex-direction: row;
+                align-items: initial;
                 > div {
+                    max-width: 450px;
+
                     &:last-child {
                         margin-left: var(--space);
                     }
