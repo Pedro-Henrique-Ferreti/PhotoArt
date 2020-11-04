@@ -142,6 +142,7 @@ body .section-title.page h1 {
 }
 #header .container .menu.open {
   left: 0;
+  position: fixed;
 }
 #header .container .menu header {
   padding: var(--space);
