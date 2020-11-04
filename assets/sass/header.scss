@@ -25,6 +25,7 @@
             flex-direction: column;
             &.open {
                 left: 0;
+                position: fixed;
             }
             header {
                 padding: var(--space);
@@ -33,7 +34,7 @@
                 padding-bottom: var(--space);
                 border-bottom: 1px solid var(--gray-1);
             }
-            nav {
+            nav { 
                 padding: var(--space);
                 ul {
                     width: 100%;
