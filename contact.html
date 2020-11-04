@@ -25,7 +25,10 @@
     <meta name="theme-color" content="#10957C">
     <meta name="description" content="Sua vida registrada">
 
+    <link rel="preload" href="assets/fonts/OpenSans-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="assets/fonts/OpenSans-SemiBold.ttf" as="font" crossorigin>
     <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/js/menu.js" as="script">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -36,7 +39,7 @@
             <div class="menu" id="mobile-menu">
                 <header>
                     <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Logo PhotoArt"></a>
-                    <button type="button" class="mobile-buttons" id="close-menu">
+                    <button type="button" class="mobile-buttons" id="close-menu" aria-label="Fechar menu"> 
                         <svg fill="#333" xmlns="http://www.w3.org/2000/svg" width="23.524" height="23.524" viewBox="0 0 23.524 23.524">
                             <g id="cancel" transform="translate(0 0)">
                               <g id="Grupo_154" data-name="Grupo 154" transform="translate(0 0)">
@@ -55,7 +58,7 @@
                     </ul>
                 </nav>
             </div>
-            <button type="button" class="mobile-buttons" id="open-menu">
+            <button type="button" class="mobile-buttons" id="open-menu" aria-label="Abrir menu">
                 <svg fill="#333" xmlns="http://www.w3.org/2000/svg" width="37.896" height="23.685" viewBox="0 0 37.896 23.685">
                     <g id="menu_1_" data-name="menu (1)" transform="translate(0 -96)">
                       <g id="Grupo_139" data-name="Grupo 139" transform="translate(0 96)">
@@ -159,17 +162,17 @@
                         <form class="default">
                             <div class="row">
                                 <div>
-                                    <input type="text" name="name" placeholder="Seu nome">
+                                    <input type="text" name="name" placeholder="Seu nome" aria-label="Nome">
                                 </div>
                             </div>
                             <div class="row">
                                 <div>
-                                    <input type="text" name="email" placeholder="Seu email">
+                                    <input type="text" name="email" placeholder="Seu email" aria-label="Email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div>
-                                    <textarea name="message" placeholder="Sua mensagem"></textarea>
+                                    <textarea name="message" placeholder="Sua mensagem" aria-label="Mensagem"></textarea>
                                 </div>
                             </div>
                             <div class="row">

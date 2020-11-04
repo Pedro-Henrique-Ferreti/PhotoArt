@@ -3,6 +3,7 @@
     src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
     font-style: normal;
     font-weight: 300;
+    font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
     src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
     src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
     font-style: normal;
     font-weight: 600;
+    font-display: swap;
 }
 
 @font-face {
@@ -24,4 +27,5 @@
     src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
     font-style: normal;
     font-weight: bold;
+    font-display: swap;
 }
