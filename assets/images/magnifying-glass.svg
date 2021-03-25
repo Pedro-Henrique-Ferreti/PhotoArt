@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="496.999" height="496.997" viewBox="0 0 496.999 496.997">
+  <g id="magnifying-glass" transform="translate(0 -0.001)">
+    <path id="Caminho_1" data-name="Caminho 1" d="M106.265,358.913l-95.282,127.1a37.5,37.5,0,0,0,53.033,0l84.675-84.675Z" fill="#1b74d6"/>
+    <path id="Caminho_2" data-name="Caminho 2" d="M127.478,380.126,42.8,464.8c-14.644,14.644-28.892,24.141-31.82,21.213a37.5,37.5,0,0,1,0-53.033l84.675-84.675Z" fill="#1e8aff"/>
+    <path id="Caminho_3" data-name="Caminho 3" d="M111.193,325.807h75v45h-75Z" transform="translate(-202.739 207.159) rotate(-45)" fill="#ffeac3"/>
+    <path id="Caminho_4" data-name="Caminho 4" d="M143.335,279.419l-13.86,32.4a7.5,7.5,0,0,0,1.592,8.253l45.858,45.857a7.5,7.5,0,0,0,8.253,1.592l32.4-13.86Z" fill="#ffd17e"/>
+    <path id="Caminho_5" data-name="Caminho 5" d="M159.3,390.734l-21.213-21.213-21.213,21.213,21.213,21.213A15,15,0,1,0,159.3,390.734Z" fill="#ffb739"/>
+    <path id="Caminho_6" data-name="Caminho 6" d="M138.086,390.734a15,15,0,0,0,0-21.213l-31.82-31.82a15,15,0,0,0-21.213,21.213l31.82,31.82A15,15,0,0,0,138.086,390.734Z" fill="#ffd17e"/>
+    <circle id="Elipse_1" data-name="Elipse 1" cx="188.5" cy="188.5" r="188.5" transform="translate(119.999 0.001)" fill="#ffb739"/>
+    <path id="Caminho_7" data-name="Caminho 7" d="M308.5,30V347a158.5,158.5,0,0,0,0-317Z" fill="#dbebff"/>
+    <path id="Caminho_8" data-name="Caminho 8" d="M437,188.5C437,100.964,379.468,30,308.5,30a158.5,158.5,0,0,0,0,317C379.468,347,437,276.038,437,188.5Z" fill="#fff"/>
+  </g>
+</svg>
