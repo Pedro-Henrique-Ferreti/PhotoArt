@@ -11,7 +11,7 @@
   --green: #10957C;
   --blue: #0049C8;
   --blue-2: #0A6BA1;
-  --blue-3: #1558ca;
+  --blue-3: #2f6dda;
   --space: 20px;
 }
 
@@ -306,6 +306,7 @@ form.default .row > div button[type=submit] {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: var(--blue);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   align-self: center;
 }
 form.default .row > div button[type=submit]:hover {
@@ -512,6 +513,7 @@ form.default .row > div button[type=submit]:hover {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: var(--blue);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   align-self: center;
 }
 #landing .container .overlay .content a:hover {
@@ -560,12 +562,21 @@ form.default .row > div button[type=submit]:hover {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: var(--blue);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 }
 #call-to-pages .container .call-services a:hover {
   background-color: var(--blue-3);
 }
 
 @media (min-width: 992px) {
+  #landing .container {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #landing .container .overlay {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
   #landing .container .overlay .content h1 {
     font-size: 32px;
   }
@@ -608,6 +619,8 @@ form.default .row > div button[type=submit]:hover {
 .service-example .container > section > div > img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 }
 .service-example .container > section > div h3 {
   margin: var(--space) 0;
@@ -657,6 +670,7 @@ form.default .row > div button[type=submit]:hover {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: var(--blue);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   align-self: center;
 }
 .service-example .container > section > div a:hover {
@@ -724,6 +738,8 @@ form.default .row > div button[type=submit]:hover {
   height: auto;
   margin-bottom: var(--space);
   transition: transform 0.3s;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 }
 .recent-work .container .works .work img:hover {
   transform: scale(1.05);
@@ -1043,6 +1059,7 @@ form.default .row > div button[type=submit]:hover {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: var(--blue);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   position: absolute;
   bottom: -50px;
   left: calc(50% - 150px);

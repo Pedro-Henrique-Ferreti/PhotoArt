@@ -1,16 +1,22 @@
 {
-    "name": "photo-art-lab",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
-      "build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "sass": "^1.26.10"
-    }
+  "name": "photo-art-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
+	"sass-build": "sass public/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
+	"dev": "webpack serve --content-base public --hot",
+    "build": "webpack --mode=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "imask": "^6.0.7",
+    "sass": "^1.26.10",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
+}
