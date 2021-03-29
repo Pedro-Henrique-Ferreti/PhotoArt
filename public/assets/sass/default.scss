@@ -24,6 +24,12 @@ body {
     padding: 0;
     border: 0;
     flex-direction: column;
+    #app {
+        margin: inherit;
+        padding: inherit;
+        border: inherit;
+        flex-direction: inherit;
+    }
     .container {
         width: 100%;
         max-width: 1240px;
