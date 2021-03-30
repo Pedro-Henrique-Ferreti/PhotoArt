@@ -1,1 +1,3 @@
-import './Vue/Vue';
+import './Vue/main';
+
+console.log('Starting again')

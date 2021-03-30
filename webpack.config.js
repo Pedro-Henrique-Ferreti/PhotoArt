@@ -7,5 +7,8 @@ module.exports = {
         filename: 'app.js',
         path: path.resolve(__dirname, 'public/assets/js')
     },
+    devServer: {
+        publicPath: "/assets/js/",
+    },
     devtool: 'eval-source-map'
 }
