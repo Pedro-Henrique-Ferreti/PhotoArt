@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "apiKey": "AIzaSyCHH7Pz6m7ojni5_SXLQdDv0UOrr1yJQR4",
+  "authDomain": "photoart-9f830.firebaseapp.com",
+  "projectId": "photoart-9f830",
+  "storageBucket": "photoart-9f830.appspot.com",
+  "messagingSenderId": "505312937949",
+  "appId": "1:505312937949:web:55da59a4dde3eed523d834"
+}
