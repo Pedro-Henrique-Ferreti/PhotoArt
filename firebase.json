@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "public",
+    "site": "photoart-lab", 
     "ignore": [
       "firebase.json",
       "**/.*",
