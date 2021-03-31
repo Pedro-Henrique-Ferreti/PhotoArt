@@ -173,8 +173,7 @@ body .section-title.page h1 {
 }
 #header .container .menu nav ul li a {
   color: var(--dark);
-  font-size: 20px;
-  text-transform: uppercase;
+  font-size: 18px;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.25s ease-in-out;
@@ -185,7 +184,30 @@ body .section-title.page h1 {
 #header .container .menu nav ul li a.active {
   color: var(--green);
   font-weight: 600;
-  border-bottom: 3px solid var(--green);
+  border-bottom: 2px solid var(--green);
+}
+#header .container .menu nav ul li a.button {
+  width: 100%;
+  max-width: 230px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--blue);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+#header .container .menu nav ul li a.button:hover {
+  background-color: var(--blue-3);
 }
 #header .container .mobile-buttons {
   border: none;
@@ -204,17 +226,14 @@ body .section-title.page h1 {
 }
 
 @media (min-width: 992px) {
-  #header {
-    height: 100px;
-  }
   #header .container {
     justify-content: space-between;
   }
   #header .container .logo {
-    width: 290px;
+    width: 230px;
   }
   #header .container .logo img {
-    width: 290px;
+    width: inherit;
   }
   #header .container .menu {
     position: initial;
@@ -263,16 +282,20 @@ form.default .row > div {
 form.default .row > div input, form.default .row > div textarea, form.default .row > div select {
   width: 100%;
   height: 40px;
-  border-radius: 25px;
+  border-radius: 5px;
   background-color: var(--white);
   padding: 0 var(--space);
   color: var(--dark);
   border: 1px solid var(--gray-3);
   font-size: 16px;
   outline: none;
+  transition: all 0.3s ease-in-out;
 }
 form.default .row > div input::placeholder, form.default .row > div textarea::placeholder, form.default .row > div select::placeholder {
   color: var(--gray-3);
+}
+form.default .row > div input:hover, form.default .row > div input:focus, form.default .row > div textarea:hover, form.default .row > div textarea:focus, form.default .row > div select:hover, form.default .row > div select:focus {
+  border-color: var(--green);
 }
 form.default .row > div textarea {
   resize: none;
@@ -297,15 +320,16 @@ form.default .row > div .checkbox label {
 }
 form.default .row > div button[type=submit] {
   width: 100%;
-  max-width: 300px;
+  max-width: 230px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--white);
   text-transform: uppercase;
-  font-size: 20px;
-  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
   text-decoration: none;
   outline: none;
   border: 0;
@@ -388,19 +412,17 @@ form.default .row > div button[type=submit]:hover {
 }
 #newsletter .container form button[type=submit] {
   position: absolute;
-  right: 10px;
-  top: 3px;
+  right: 0;
   width: 120px;
   justify-content: space-between;
   padding: 10px;
-  height: 35px;
 }
 
 #footer {
   width: 100%;
   background-color: var(--gray-6);
   color: var(--white);
-  margin-top: calc(var(--space) * 3);
+  margin-top: calc(var(--space) * 2);
   padding: var(--space) 0;
 }
 #footer .container {
@@ -504,15 +526,16 @@ form.default .row > div button[type=submit]:hover {
 }
 #landing .container .overlay .content a {
   width: 100%;
-  max-width: 300px;
+  max-width: 230px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--white);
   text-transform: uppercase;
-  font-size: 20px;
-  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
   text-decoration: none;
   outline: none;
   border: 0;
@@ -553,15 +576,16 @@ form.default .row > div button[type=submit]:hover {
 }
 #call-to-pages .container .call-services a {
   width: 100%;
-  max-width: 300px;
+  max-width: 230px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--white);
   text-transform: uppercase;
-  font-size: 20px;
-  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
   text-decoration: none;
   outline: none;
   border: 0;
@@ -661,15 +685,16 @@ form.default .row > div button[type=submit]:hover {
 }
 .service-example .container > section > div a {
   width: 100%;
-  max-width: 300px;
+  max-width: 230px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--white);
   text-transform: uppercase;
-  font-size: 20px;
-  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
   text-decoration: none;
   outline: none;
   border: 0;
@@ -768,6 +793,10 @@ form.default .row > div button[type=submit]:hover {
 }
 #our-services .container {
   flex-direction: column;
+}
+#our-services .container .service-wrapper {
+  flex-direction: column;
+  width: 100%;
 }
 #our-services .container .service-category {
   width: 100%;
@@ -1022,6 +1051,17 @@ form.default .row > div button[type=submit]:hover {
     margin-right: 10px;
   }
 }
+#auth {
+  height: 100%;
+  margin-top: 30px;
+}
+#auth .container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 #error-404 .container {
   max-width: 790px;
   margin-top: calc(var(--space) * 3);
@@ -1050,15 +1090,16 @@ form.default .row > div button[type=submit]:hover {
 }
 #error-404 .container div a {
   width: 100%;
-  max-width: 300px;
+  max-width: 230px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--white);
   text-transform: uppercase;
-  font-size: 20px;
-  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
   text-decoration: none;
   outline: none;
   border: 0;

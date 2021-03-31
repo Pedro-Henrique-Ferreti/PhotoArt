@@ -35,41 +35,28 @@
 </head>
 <body>
     <div id="app">
-        <the-header page="services"></the-header>
+        <the-header page="contact"></the-header>
 
         <main>
-            <section id="our-services">
+            <section id="auth">
                 <div class="container">
-                    <header class="section-title page">
-                        <hr>
-                        <h1>O que a PhotoArt oferece</h1>
-                        <hr>
-                    </header>
-                    <div class="service-wrapper"></div>
-                    <section class="budget">
-                        <div class="budget-form">
-                            <h2>Faça um orçamento</h2>
-                            <p>Não perca tempo! Solicite um orçamento para a PhotoArt e obtenha a melhor qualidade na entrega do serviço desejado.</p>
-        
-                            <form class="default">
-                                <div class="row">
-                                    <div>
-                                        <input type="text" name="name" placeholder="Seu nome" aria-label="Nome">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div>
-                                        <input type="email" name="email" placeholder="Seu email" aria-label="Email">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div>
-                                        <button type="submit">Entrar em Contato</button>
-                                    </div>
-                                </div>
-                            </form>
+                    <form class="default">
+                        <div class="row">
+                            <div>
+                                <input type="email" name="email" placeholder="E-mail" aria-label="Email">
+                            </div>
                         </div>
-                    </section>
+                        <div class="row">
+                            <div>
+                                <input type="password" name="password" placeholder="Senha" aria-label="Senha">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <button type="submit">Fazer Login</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>

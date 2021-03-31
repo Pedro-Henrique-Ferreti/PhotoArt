@@ -12,15 +12,16 @@
 
 @mixin call-to-action {
     width: 100%;
-    max-width: 300px;
+    max-width: 230px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--white);
     text-transform: uppercase;
-    font-size: 20px;
-    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
     text-decoration: none;
     outline: none;
     border: 0;

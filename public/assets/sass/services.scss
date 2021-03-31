@@ -1,6 +1,10 @@
 #our-services {
     .container {
         flex-direction: column;
+        .service-wrapper {
+            flex-direction: column;
+            width: 100%;
+        }
         .service-category {
             width: 100%;
             flex-direction: column;
