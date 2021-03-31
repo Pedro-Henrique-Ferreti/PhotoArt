@@ -24,8 +24,11 @@ const renderServices = async (page) => {
         });
     });
 
+    const wrapper = page.querySelector('.service-wrapper');
+    wrapper.innerHTML = '';
+
     data.forEach(category => {
-        page.querySelector('.service-wrapper').append(mountTemplate(category));
+        wrapper.append(mountTemplate(category));
     });
 }   
 
