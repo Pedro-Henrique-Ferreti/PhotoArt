@@ -19,12 +19,10 @@ export default {
                     </header>
                     <nav>
                         <ul>
-                            <header-link v-for="route in routes" :key="route.name"
-                                :path="route.path"
-                                :isActive="route.activeName === page"
-                            >
-                                {{ route.name }}
-                            </header-link>
+                            <li v-for="route in routes">
+                                <a :href="route.path" :class="{ 'active': route.activeName === page }">{{ route.name }}</a>
+                            </li>
+                            <li><a href="auth.html" class="button">Minha conta</a></li>
                         </ul>
                     </nav>
                 </div>
