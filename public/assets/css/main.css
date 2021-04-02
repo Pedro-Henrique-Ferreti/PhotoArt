@@ -62,7 +62,7 @@ ul {
 
 main {
   width: 100%;
-  min-height: calc(100vh - 235px);
+  min-height: calc(100vh - 195px);
   flex-direction: column;
 }
 
@@ -196,7 +196,7 @@ body .section-title.page h1 {
   color: var(--white);
   text-transform: uppercase;
   font-size: 16px;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 5px;
   text-decoration: none;
   outline: none;
@@ -208,6 +208,31 @@ body .section-title.page h1 {
 }
 #header .container .menu nav ul li a.button:hover {
   background-color: var(--blue-3);
+}
+#header .container .menu nav ul li a.button:disabled {
+  cursor: not-allowed;
+}
+#header .container .menu nav ul li a.button:disabled:hover {
+  background-color: var(--blue);
+}
+#header .container .menu nav ul li a.button:disabled .app-loader {
+  display: flex;
+}
+#header .container .menu nav ul li a.button .app-loader {
+  display: none;
+}
+#header .container .menu nav ul li a.button .app-loader .loader {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .container .menu nav ul li a.button .app-loader .loader div {
+  width: 25px;
+  height: 25px;
+  border-width: 4px;
+  margin: 0;
 }
 #header .container .mobile-buttons {
   border: none;
@@ -328,7 +353,7 @@ form.default .row > div button[type=submit] {
   color: var(--white);
   text-transform: uppercase;
   font-size: 16px;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 5px;
   text-decoration: none;
   outline: none;
@@ -341,6 +366,31 @@ form.default .row > div button[type=submit] {
 }
 form.default .row > div button[type=submit]:hover {
   background-color: var(--blue-3);
+}
+form.default .row > div button[type=submit]:disabled {
+  cursor: not-allowed;
+}
+form.default .row > div button[type=submit]:disabled:hover {
+  background-color: var(--blue);
+}
+form.default .row > div button[type=submit]:disabled .app-loader {
+  display: flex;
+}
+form.default .row > div button[type=submit] .app-loader {
+  display: none;
+}
+form.default .row > div button[type=submit] .app-loader .loader {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form.default .row > div button[type=submit] .app-loader .loader div {
+  width: 25px;
+  height: 25px;
+  border-width: 4px;
+  margin: 0;
 }
 
 @media (min-width: 992px) {
@@ -416,6 +466,176 @@ form.default .row > div button[type=submit]:hover {
   width: 120px;
   justify-content: space-between;
   padding: 10px;
+}
+
+.app-loader {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.app-loader .loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.app-loader .loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--green) transparent transparent transparent;
+}
+.app-loader .loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.app-loader .loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.app-loader .loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.alert-wrapper {
+  position: fixed;
+  top: 20px;
+  left: calc(50vw - 160px);
+  flex-direction: column-reverse;
+  z-index: 10;
+  width: 100%;
+}
+.alert-wrapper .alert + .alert {
+  margin-bottom: 20px;
+}
+.alert-wrapper .alert {
+  width: 100%;
+  max-width: 320px;
+  min-height: 65px;
+  border-left: 3px solid;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  background-color: #ebebeb;
+  border-left-color: #6c6c6c;
+}
+@media (min-width: 600px) {
+  .alert-wrapper .alert {
+    max-width: 400px;
+  }
+}
+.alert-wrapper .alert.show {
+  transform: translateY(25px);
+  opacity: 1;
+  visibility: visible;
+}
+.alert-wrapper .alert .content {
+  flex-grow: 1;
+  align-items: center;
+}
+.alert-wrapper .alert .content p {
+  color: var(--dark);
+  margin: 0;
+}
+.alert-wrapper .alert .button {
+  margin-left: 5px;
+  height: inherit;
+  justify-content: flex-end;
+  align-items: center;
+}
+.alert-wrapper .alert .button > button {
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #6c6c6c;
+}
+.alert-wrapper .alert .button > button svg {
+  width: 13px;
+  height: 13px;
+  fill: #6c6c6c;
+}
+.alert-wrapper .alert .countdown {
+  background-color: #6c6c6c;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: countdown 7s forwards;
+}
+.alert-wrapper .alert.success {
+  background-color: #a8f1c6;
+  border-left-color: #248d50;
+}
+.alert-wrapper .alert.success .button button {
+  border-color: #248d50;
+}
+.alert-wrapper .alert.success .button button svg {
+  fill: #248d50;
+}
+.alert-wrapper .alert.success .countdown {
+  background-color: #248d50;
+}
+.alert-wrapper .alert.danger {
+  background-color: #f6a6a3;
+  border-left-color: #981f1b;
+}
+.alert-wrapper .alert.danger .button button {
+  border-color: #981f1b;
+}
+.alert-wrapper .alert.danger .button button svg {
+  fill: #981f1b;
+}
+.alert-wrapper .alert.danger .countdown {
+  background-color: #981f1b;
+}
+.alert-wrapper .alert.warning {
+  background-color: #ffd38a;
+  border-left-color: #94610f;
+}
+.alert-wrapper .alert.warning .button button {
+  border-color: #94610f;
+}
+.alert-wrapper .alert.warning .button button svg {
+  fill: #94610f;
+}
+.alert-wrapper .alert.warning .countdown {
+  background-color: #94610f;
+}
+@keyframes countdown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+    display: none;
+  }
 }
 
 #footer {
@@ -534,7 +754,7 @@ form.default .row > div button[type=submit]:hover {
   color: var(--white);
   text-transform: uppercase;
   font-size: 16px;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 5px;
   text-decoration: none;
   outline: none;
@@ -547,6 +767,31 @@ form.default .row > div button[type=submit]:hover {
 }
 #landing .container .overlay .content a:hover {
   background-color: var(--blue-3);
+}
+#landing .container .overlay .content a:disabled {
+  cursor: not-allowed;
+}
+#landing .container .overlay .content a:disabled:hover {
+  background-color: var(--blue);
+}
+#landing .container .overlay .content a:disabled .app-loader {
+  display: flex;
+}
+#landing .container .overlay .content a .app-loader {
+  display: none;
+}
+#landing .container .overlay .content a .app-loader .loader {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#landing .container .overlay .content a .app-loader .loader div {
+  width: 25px;
+  height: 25px;
+  border-width: 4px;
+  margin: 0;
 }
 
 #call-to-pages {
@@ -584,7 +829,7 @@ form.default .row > div button[type=submit]:hover {
   color: var(--white);
   text-transform: uppercase;
   font-size: 16px;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 5px;
   text-decoration: none;
   outline: none;
@@ -596,6 +841,31 @@ form.default .row > div button[type=submit]:hover {
 }
 #call-to-pages .container .call-services a:hover {
   background-color: var(--blue-3);
+}
+#call-to-pages .container .call-services a:disabled {
+  cursor: not-allowed;
+}
+#call-to-pages .container .call-services a:disabled:hover {
+  background-color: var(--blue);
+}
+#call-to-pages .container .call-services a:disabled .app-loader {
+  display: flex;
+}
+#call-to-pages .container .call-services a .app-loader {
+  display: none;
+}
+#call-to-pages .container .call-services a .app-loader .loader {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#call-to-pages .container .call-services a .app-loader .loader div {
+  width: 25px;
+  height: 25px;
+  border-width: 4px;
+  margin: 0;
 }
 
 @media (min-width: 992px) {
@@ -693,7 +963,7 @@ form.default .row > div button[type=submit]:hover {
   color: var(--white);
   text-transform: uppercase;
   font-size: 16px;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 5px;
   text-decoration: none;
   outline: none;
@@ -706,6 +976,31 @@ form.default .row > div button[type=submit]:hover {
 }
 .service-example .container > section > div a:hover {
   background-color: var(--blue-3);
+}
+.service-example .container > section > div a:disabled {
+  cursor: not-allowed;
+}
+.service-example .container > section > div a:disabled:hover {
+  background-color: var(--blue);
+}
+.service-example .container > section > div a:disabled .app-loader {
+  display: flex;
+}
+.service-example .container > section > div a .app-loader {
+  display: none;
+}
+.service-example .container > section > div a .app-loader .loader {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-example .container > section > div a .app-loader .loader div {
+  width: 25px;
+  height: 25px;
+  border-width: 4px;
+  margin: 0;
 }
 
 @media (min-width: 992px) {
@@ -1098,7 +1393,7 @@ form.default .row > div button[type=submit]:hover {
   color: var(--white);
   text-transform: uppercase;
   font-size: 16px;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 5px;
   text-decoration: none;
   outline: none;
@@ -1113,6 +1408,31 @@ form.default .row > div button[type=submit]:hover {
 }
 #error-404 .container div a:hover {
   background-color: var(--blue-3);
+}
+#error-404 .container div a:disabled {
+  cursor: not-allowed;
+}
+#error-404 .container div a:disabled:hover {
+  background-color: var(--blue);
+}
+#error-404 .container div a:disabled .app-loader {
+  display: flex;
+}
+#error-404 .container div a .app-loader {
+  display: none;
+}
+#error-404 .container div a .app-loader .loader {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#error-404 .container div a .app-loader .loader div {
+  width: 25px;
+  height: 25px;
+  border-width: 4px;
+  margin: 0;
 }
 
 @media (min-width: 550px) {

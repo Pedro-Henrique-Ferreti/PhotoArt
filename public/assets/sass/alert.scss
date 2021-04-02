@@ -1,0 +1,132 @@
+.alert-wrapper {
+    $default: #ebebeb;
+    $default-dark: #6c6c6c;
+    $success: #a8f1c6;
+    $success-dark: #248d50;
+    $danger: #f6a6a3;
+    $danger-dark: #981f1b;
+    $warning: #ffd38a;
+    $warning-dark: #94610f;
+    position: fixed;
+    top: 20px;
+    left: calc(50vw - 160px);
+    flex-direction: column-reverse;
+    z-index: 10;
+    width: 100%;
+    .alert + .alert {
+        margin-bottom: 20px;
+    }
+    .alert {
+        @media (min-width: 600px) {
+            max-width: 400px;
+        }
+        width: 100%;
+        max-width: 320px;
+        min-height: 65px;
+        border-left: 3px solid;
+        border-radius: 5px;
+        padding: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+        background-color: $default;
+        border-left-color: $default-dark;
+        &.show {
+            transform: translateY(25px);
+            opacity: 1;
+            visibility: visible;
+        }
+        .content {
+            flex-grow: 1;
+            align-items: center;
+            p {
+                color: var(--dark);
+                margin: 0;
+            }
+        }
+        .button {
+            margin-left: 5px;
+            height: inherit;
+            justify-content: flex-end;
+            align-items: center;
+            > button {
+                @include button;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid $default-dark;
+                svg {
+                    width: 13px;
+                    height: 13px;
+                    fill: $default-dark;
+                }
+            }
+        }
+        .countdown {
+            background-color: $default-dark;
+            width: 100%;
+            height: 3px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: countdown 7s forwards;
+        }
+        &.success {
+            background-color: $success;
+            border-left-color: $success-dark;
+            .button {
+                button {
+                    border-color: $success-dark;
+                    svg {
+                        fill: $success-dark;
+                    }
+                }
+            }
+            .countdown {
+                background-color: $success-dark;
+            }
+        }
+        &.danger {
+            background-color: $danger;
+            border-left-color: $danger-dark;
+            .button {
+                button {
+                    border-color: $danger-dark;
+                    svg {
+                        fill: $danger-dark;
+                    }
+                }
+            }
+            .countdown {
+                background-color: $danger-dark;
+            }
+        }
+        &.warning {
+            background-color: $warning;
+            border-left-color: $warning-dark;
+            .button {
+                button {
+                    border-color: $warning-dark;
+                    svg {
+                        fill: $warning-dark;
+                    }
+                }
+            }
+            .countdown {
+                background-color: $warning-dark;
+            }
+        }
+    
+        @keyframes countdown {
+            0% {
+                width: 100%;
+            }
+            100% {
+                width: 0;
+                display: none;
+            }
+        }
+    }
+}
