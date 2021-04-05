@@ -1,6 +1,7 @@
 #portifolio {
     .container {
         flex-direction: column;
+        align-items: center;
         .budget {
             flex-direction: column;
             align-items: center;
@@ -9,61 +10,43 @@
         }
     }
 }
-
 .recent-work {
+    @media (min-width: 600px) {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 580px;
+    }
+    @media (min-width: 920px) {
+        max-width: 900px;
+    }
+    @media (min-width: 1300px) {
+        max-width: 1280px;
+    }
     width: 100%;
-    &.bg-gray {
-        background-color: var(--gray-2);
-        padding: var(--space) 0;
-        margin-top: calc(var(--space) * 3);
-    }
-    .container {
-        flex-direction: column;    
-        .works {
+    flex-direction: column;
+    align-items: center;
+    max-width: 375px;
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 280px;
+        color: var(--dark);
+        font-size: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        margin-bottom: var(--space);
+        img {
             width: 100%;
-            flex-direction: column;
-            .work {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                color: var(--dark);
-                font-size: 20px;
-                text-decoration: none;
-                cursor: pointer;
-                margin-bottom: var(--space);
-                img {
-                    width: 100%;
-                    max-width: 375px;
-                    height: auto;
-                    margin-bottom: var(--space);
-                    transition: transform .3s;
-                    border-radius: 10px;
-                    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-                    &:hover {
-                        transform: scale(1.05)
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 992px) {
-    .recent-work {
-        .container {
-            .works {
-                flex-direction: row;
-                .work {
-                    margin-bottom: 0;
-                    margin: 10px;
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
+            height: auto;
+            margin-bottom: 10px;
+            transition: transform .3s;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+            &:hover {
+                transform: scale(1.05)
             }
         }
     }

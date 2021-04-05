@@ -1,4 +1,4 @@
-import firebase from './firebase-app';
+import { fetchCollection } from './utils';
 
 const page = document.querySelector('#our-services');
 
@@ -7,74 +7,46 @@ if (page) {
     const renderServices = async (page) => {
         const categories = await fetchCollection('serviceCategories');
         const services = await fetchCollection('services');
-    
+
         const data = [];
     
-        categories.forEach(category => {
-            const categoryServices = [];
-    
-            services.forEach(service => {
+        services.forEach(service => {
+            categories.forEach(category => {
                 if (service.categoryId === category.id) {
-                    categoryServices.push(service);
+                    data.push({
+                        name: service.name,
+                        category: category.name,
+                        photo: service.photo,
+                        description: service['short_description'],
+                    });
                 }
-            });
-    
-            data.push({
-                name: category.name,
-                id: category.id,
-                services: categoryServices
             });
         });
     
         const wrapper = page.querySelector('.service-wrapper');
         wrapper.innerHTML = '';
     
-        data.forEach(category => {
-            wrapper.append(mountTemplate(category));
+        data.forEach(service => {
+            wrapper.append(mountTemplate(service));
         });
     }   
     
-    const fetchCollection = async (collection) => {
-        const data = [];
-        const response = await firebase.firestore().collection(collection).get();
-        
-        response.forEach(responseItem => {
-            data.push(responseItem.data());
-        });
+    const mountTemplate = (service) => {
+        let template = document.createElement('div');
     
-        return data;
-    }
-    
-    const mountTemplate = (category) => {
-        let template = document.createElement('section');
-    
-        template.classList.add('service-category');
+        template.classList.add('service-card');
     
         template.innerHTML = `
-            <header class="section-title">
-                <hr>
-                <h2>${category.name}</h2>
-                <hr>
-            </header>
-            <div id="services"></div>
-        `;
-    
-        category.services.forEach(service => {
-            let wrapper = document.createElement('a');
-    
-            wrapper.classList.add('item');
-            wrapper.href = "detailed-services.html";
-    
-            wrapper.innerHTML = `
-                <div>
-                    <img src="assets/images/calendar.svg" alt="Calendário">
-                    <h3>${service.name}</h3>
-                    <p>Agilidade e qualidade para cobrir qualquer tipo de evento corporativo e pessoal. Eternize e compartilhe esses momentos com fotos profissionais!</p>
+            <img src="${service.photo}" alt="Service Photo">
+            <div class="tag">${service.category}</div>
+            <div class="content">
+                <h3>${service.name}</h3>
+                <p>${service.description}</p>
+                <div class="buttons">
+                    <a href="#">Detalhes</a>
                 </div>
-            `;
-    
-            template.querySelector('#services').append(wrapper);
-        });        
+            </div>
+        `;
     
         return template;
     }

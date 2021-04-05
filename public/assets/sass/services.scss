@@ -1,46 +1,75 @@
 #our-services {
     .container {
         flex-direction: column;
+        align-items: center;
         .service-wrapper {
+            @media (min-width: 600px) {
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: 580px;
+            }
+            @media (min-width: 920px) {
+                max-width: 900px;
+            }
+            @media (min-width: 1300px) {
+                max-width: 1280px;
+            }
             flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
             width: 100%;
-        }
-        .service-category {
-            width: 100%;
-            flex-direction: column;
-            margin-bottom: calc(var(--space) * 2);
-            > div {
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: var(--space);
-                .item {
-                    text-decoration: none;
-                    margin: 5px;
-                    div {
-                        width: 275px;
-                        height: 256px;
-                        border-radius: 10px;
-                        box-shadow: 0px 0px 12px 0 rgba(0, 0, 0, .16);
-                        padding: var(--space);
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
+            margin-bottom: 30px;
+            .service-card {
+                width: 280px;
+                height: 380px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                background-color: #FFF;
+                margin-bottom: 20px;
+                flex-direction: column;
+                transition: transform 0.4s ease-in-out;
+                position: relative;
+                &:hover {
+                    transform: scale(1.03);
+                }
+                .tag {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 10px 20px;
+                    width: fit-content;
+                    border-top-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    background-color:var(--green);
+                    color: var(--white);
+                }
+                > img {
+                    width: auto;
+                    height: 187px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+                .content {
+                    padding: 10px;
+                    padding-bottom: var(--space);
+                    flex-direction: column;
+                    height: 100%;
+                    h3 {
                         color: var(--dark);
-                        font-size: 16px;
-                        cursor: pointer;
-                        transition: all .3s ease-in-out;
-                        &:hover {
-                            box-shadow: 0px 0px 12px 0 rgba(0, 0, 0, 0.3);
-                        }
-                        h3 {
-                            font-weight: 600;
-                            font-size: 20px;
-                            margin: 10px 0;
-                            text-align: center;
-                        }
-                        p {
-                            margin: 0;
-                            text-align: center;
+                        margin: 0;
+                        text-align: center;
+                        font-weight: 600;
+                    }
+                    p {
+                        color: rgb(110, 110, 110);
+                        text-align: center;
+                    }
+                    .buttons {
+                        flex-grow: 1;
+                        justify-content: center;
+                        align-items: flex-end;
+                        a {
+                            @include call-to-action;
                         }
                     }
                 }
@@ -50,18 +79,6 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-        }
-    }
-}
-
-@media (min-width: 1200px) {
-    #our-services {
-        .container {
-            .service-category {
-                > div {
-                    justify-content: space-between;
-                }
-            }
         }
     }
 }
