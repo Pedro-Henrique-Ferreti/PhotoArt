@@ -1088,51 +1088,131 @@ form.default .row > div button[type=submit] .app-loader .loader div {
 }
 #our-services .container {
   flex-direction: column;
+  align-items: center;
 }
 #our-services .container .service-wrapper {
   flex-direction: column;
-  width: 100%;
-}
-#our-services .container .service-category {
-  width: 100%;
-  flex-direction: column;
-  margin-bottom: calc(var(--space) * 2);
-}
-#our-services .container .service-category > div {
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: var(--space);
-}
-#our-services .container .service-category > div .item {
-  text-decoration: none;
-  margin: 5px;
-}
-#our-services .container .service-category > div .item div {
-  width: 275px;
-  height: 256px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 12px 0 rgba(0, 0, 0, 0.16);
-  padding: var(--space);
-  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 30px;
+}
+@media (min-width: 600px) {
+  #our-services .container .service-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 580px;
+  }
+}
+@media (min-width: 920px) {
+  #our-services .container .service-wrapper {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1300px) {
+  #our-services .container .service-wrapper {
+    max-width: 1280px;
+  }
+}
+#our-services .container .service-wrapper .service-card {
+  width: 280px;
+  height: 380px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  background-color: #FFF;
+  margin-bottom: 20px;
   flex-direction: column;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+}
+#our-services .container .service-wrapper .service-card:hover {
+  transform: scale(1.03);
+}
+#our-services .container .service-wrapper .service-card .tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  width: fit-content;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--green);
+  color: var(--white);
+}
+#our-services .container .service-wrapper .service-card > img {
+  width: auto;
+  height: 187px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#our-services .container .service-wrapper .service-card .content {
+  padding: 10px;
+  padding-bottom: var(--space);
+  flex-direction: column;
+  height: 100%;
+}
+#our-services .container .service-wrapper .service-card .content h3 {
   color: var(--dark);
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-#our-services .container .service-category > div .item div:hover {
-  box-shadow: 0px 0px 12px 0 rgba(0, 0, 0, 0.3);
-}
-#our-services .container .service-category > div .item div h3 {
-  font-weight: 600;
-  font-size: 20px;
-  margin: 10px 0;
-  text-align: center;
-}
-#our-services .container .service-category > div .item div p {
   margin: 0;
   text-align: center;
+  font-weight: 600;
+}
+#our-services .container .service-wrapper .service-card .content p {
+  color: #6e6e6e;
+  text-align: center;
+}
+#our-services .container .service-wrapper .service-card .content .buttons {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: flex-end;
+}
+#our-services .container .service-wrapper .service-card .content .buttons a {
+  width: 100%;
+  max-width: 230px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--blue);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+#our-services .container .service-wrapper .service-card .content .buttons a:hover {
+  background-color: var(--blue-3);
+}
+#our-services .container .service-wrapper .service-card .content .buttons a:disabled {
+  cursor: not-allowed;
+}
+#our-services .container .service-wrapper .service-card .content .buttons a:disabled:hover {
+  background-color: var(--blue);
+}
+#our-services .container .service-wrapper .service-card .content .buttons a:disabled .app-loader {
+  display: flex;
+}
+#our-services .container .service-wrapper .service-card .content .buttons a .app-loader {
+  display: none;
+}
+#our-services .container .service-wrapper .service-card .content .buttons a .app-loader .loader {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#our-services .container .service-wrapper .service-card .content .buttons a .app-loader .loader div {
+  width: 25px;
+  height: 25px;
+  border-width: 4px;
+  margin: 0;
 }
 #our-services .container .budget {
   flex-direction: column;
@@ -1140,11 +1220,6 @@ form.default .row > div button[type=submit] .app-loader .loader div {
   width: 100%;
 }
 
-@media (min-width: 1200px) {
-  #our-services .container .service-category > div {
-    justify-content: space-between;
-  }
-}
 #detailed-services {
   margin-top: calc(var(--space) * 3);
   width: 100%;
