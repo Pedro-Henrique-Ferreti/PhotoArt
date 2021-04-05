@@ -1,4 +1,4 @@
-import firebase from './firebase-app';
+import { fetchCollection } from './utils';
 
 const page = document.querySelector('#our-services');
 
@@ -30,17 +30,6 @@ if (page) {
             wrapper.append(mountTemplate(service));
         });
     }   
-    
-    const fetchCollection = async (collection) => {
-        const data = [];
-        const response = await firebase.firestore().collection(collection).get();
-        
-        response.forEach(responseItem => {
-            data.push(responseItem.data());
-        });
-    
-        return data;
-    }
     
     const mountTemplate = (service) => {
         let template = document.createElement('div');

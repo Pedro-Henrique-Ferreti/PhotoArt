@@ -1024,6 +1024,7 @@ form.default .row > div button[type=submit] .app-loader .loader div {
 }
 #portifolio .container {
   flex-direction: column;
+  align-items: center;
 }
 #portifolio .container .budget {
   flex-direction: column;
@@ -1034,58 +1035,52 @@ form.default .row > div button[type=submit] .app-loader .loader div {
 
 .recent-work {
   width: 100%;
-}
-.recent-work.bg-gray {
-  background-color: var(--gray-2);
-  padding: var(--space) 0;
-  margin-top: calc(var(--space) * 3);
-}
-.recent-work .container {
   flex-direction: column;
+  align-items: center;
+  max-width: 375px;
 }
-.recent-work .container .works {
-  width: 100%;
-  flex-direction: column;
+@media (min-width: 600px) {
+  .recent-work {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 580px;
+  }
 }
-.recent-work .container .works .work {
+@media (min-width: 920px) {
+  .recent-work {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1300px) {
+  .recent-work {
+    max-width: 1280px;
+  }
+}
+.recent-work .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 280px;
   color: var(--dark);
   font-size: 20px;
   text-decoration: none;
   cursor: pointer;
   margin-bottom: var(--space);
 }
-.recent-work .container .works .work img {
+.recent-work .card img {
   width: 100%;
-  max-width: 375px;
   height: auto;
-  margin-bottom: var(--space);
+  margin-bottom: 10px;
   transition: transform 0.3s;
   border-radius: 10px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 }
-.recent-work .container .works .work img:hover {
+.recent-work .card img:hover {
   transform: scale(1.05);
 }
 
-@media (min-width: 992px) {
-  .recent-work .container .works {
-    flex-direction: row;
-  }
-  .recent-work .container .works .work {
-    margin-bottom: 0;
-    margin: 10px;
-  }
-  .recent-work .container .works .work:first-child {
-    margin-left: 0;
-  }
-  .recent-work .container .works .work:last-child {
-    margin-right: 0;
-  }
-}
 #our-services .container {
   flex-direction: column;
   align-items: center;

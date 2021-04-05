@@ -1,3 +1,5 @@
+import firebase from './firebase-app';
+
 export function toggleButtonLoader(button, innerText = null) {
     if (!innerText) {
         button.disabled = true;
@@ -113,4 +115,15 @@ export function resetFormValues(form) {
     [...selects].forEach(select => select.selectedIndex = 0);
 
     [...textareas].forEach(textarea =>  textarea.value = '');
+}
+
+export async function fetchCollection (collection) {
+    const data = [];
+    const response = await firebase.firestore().collection(collection).get();
+    
+    response.forEach(responseItem => {
+        data.push(responseItem.data());
+    });
+
+    return data;
 }
