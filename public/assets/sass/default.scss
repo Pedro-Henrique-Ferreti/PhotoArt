@@ -24,11 +24,13 @@ body {
     padding: 0;
     border: 0;
     flex-direction: column;
+    min-height: 100vh;
     #app {
         margin: inherit;
         padding: inherit;
         border: inherit;
         flex-direction: inherit;
+        min-height: inherit;
     }
     .container {
         width: 100%;
