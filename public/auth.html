@@ -37,31 +37,81 @@
     <div id="app">
         <the-header page="contact"></the-header>
 
-        <main>
-            <section id="auth">
-                <div class="container">
-                    <form class="default">
-                        <div class="row">
-                            <div>
-                                <input type="email" name="email" placeholder="E-mail" aria-label="Email">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div>
-                                <input type="password" name="password" placeholder="Senha" aria-label="Senha">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div>
-                                <button type="submit">Fazer Login</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </main>
+        <main id="auth">
+            <div class="container">
+                <section class="illustration">
+                     <img src="assets/images/login.svg" alt="Ilustração de login" />
+                </section>
+                <section class="forms">
+                    <div class="content">
+                        <header>
+                            <h1>Bem-vindo a <span>PhotoArt</span></h1>
+                            <p>Acesse sua conta ou cadastre-se no site através dos formulários abaixo</p>
+                        </header>
+                        <ul class="form-toggler">
+                            <li class="active login">Fazer Login</li>
+                            <li class="register">Cadastrar-se</li>
+                        </ul>
 
-        <the-footer></the-footer>
+                        <form class="default show" id="form-login">
+                            <div class="row">
+                                <div>
+                                    <label>
+                                        Seu e-mail:
+                                        <input type="text" name="email" placeholder="Seu email" aria-label="Email" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <label>
+                                        Senha:
+                                        <input type="password" name="password" placeholder="Sua Senha" aria-label="Senha" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <button type="submit">Entrar</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <form class="default" id="form-register">
+                            <div class="row">
+                                <div>
+                                    <label>
+                                        Seu e-mail:
+                                        <input type="text" name="email" placeholder="Seu e-mail" aria-label="Email" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <label>
+                                        Senha:
+                                        <input type="password" name="password" placeholder="Sua Senha" aria-label="Senha" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <label>
+                                        Confirme a senha:
+                                        <input type="password" name="password-confirm" placeholder="Confirme sua senha" aria-label="Confirme a senha" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <button type="submit">Cadastrar e acessar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
     </div>
 
     <script src="assets/js/app.js"></script>
