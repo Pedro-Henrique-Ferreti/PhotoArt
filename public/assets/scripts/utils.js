@@ -127,3 +127,14 @@ export async function fetchCollection (collection) {
 
     return data;
 }
+
+export function translateError (message) {
+    switch (message) {
+        case 'auth/weak-password':
+            return 'A senha deve conter ao menos 6 caracteres'
+        case 'auth/email-already-in-use':
+            return 'O endereço de e-mail já está em uso por outra conta'  
+        default:
+            return 'Erro ao realizar a operação. Por favor, tente novamente'
+    }
+}
