@@ -1,8 +1,9 @@
-import './Vue/main';
 import './utils';
+import './home';
 import './services';
 import './portifolio';
-import './budget-form';
-import './home';
 import './contact';
 import './auth';
+import './header';
+import './footer';
+import './budget-form';

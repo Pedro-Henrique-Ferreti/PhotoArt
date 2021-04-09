@@ -8,11 +8,11 @@ if (budgetForm) {
 
     const formIsValid = (email, name) => {
         if (name.trim() === '') {
-            createAlert('Preencha o nome.', 'danger');
+            createAlert('Preencha o nome', 'danger');
             return false;
         } 
         else if (email.trim() === '') {
-            createAlert('Preencha o e-mail.', 'danger');
+            createAlert('Preencha o e-mail', 'danger');
             return false;
         }
         else return true;
@@ -42,19 +42,19 @@ if (budgetForm) {
                 response.forEach(item => data.push(item.data()) );
 
                 if (data.length > 0) {
-                    throw new Error('O e-mail informado já possui uma solicitação de orçamento cadastrada.')
+                    throw new Error('O e-mail informado já possui uma solicitação de orçamento cadastrada')
                 } 
 
                 await database.collection('budgetSolicitation').add({ name, email });
 
                 toggleButtonLoader(submitButton, submitButtonText);
 
-                createAlert('Sua solicitação foi cadastrada com sucesso. Em breve, você receberá um e-mail da nossa equipe!', 'success');
+                createAlert('Solicitação cadastrada com sucesso! Em breve, você receberá um e-mail da nossa equipe', 'success');
 
                 resetFormValues(form);                
 
             } catch (error) {
-                const defaultMessage = 'Não foi possível cadastrar a solicitação. Por favor, tente novamente.';
+                const defaultMessage = 'Não foi possível cadastrar a solicitação. Por favor, tente novamente';
 
                 createAlert(error.message || defaultMessage, 'danger');
 

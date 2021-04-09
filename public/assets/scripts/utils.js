@@ -127,3 +127,36 @@ export async function fetchCollection (collection) {
 
     return data;
 }
+
+export function translateError (message) {
+    switch (message) {
+        case 'auth/weak-password':
+            return 'A senha deve conter ao menos 6 caracteres'
+        case 'auth/email-already-in-use':
+            return 'O endereço de e-mail já está em uso por outra conta'
+        case 'auth/user-not-found':
+            return 'Não há nenhum usuário cadastrado com esse e-mail'
+        case 'auth/wrong-password':
+            return 'E-mail ou senha incorretos'  
+        default:
+            return 'Erro ao realizar a operação. Por favor, tente novamente'
+    }
+}
+
+export function loadCurrentUser() {
+    return new Promise((resolve, reject) => {
+
+        document.body.style.backgroundColor = 'red'
+
+        try {
+            firebase.auth().onAuthStateChanged(user => {
+
+                document.body.style.backgroundColor = 'azure'
+                
+                resolve(user);
+            });
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
