@@ -146,12 +146,7 @@ export function translateError (message) {
 export function loadCurrentUser() {
     return new Promise((resolve, reject) => {
         try {
-            firebase.auth().onAuthStateChanged(user => {
-
-                document.querySelector('#app-main-loader').classList.remove('show')
-                
-                resolve(user);
-            });
+            firebase.auth().onAuthStateChanged(user => resolve(user));
         } catch (error) {
             reject(error);
         }
