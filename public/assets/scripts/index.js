@@ -5,3 +5,4 @@ import './budget-form';
 import './home';
 import './contact';
 import './auth';
+import './footer';

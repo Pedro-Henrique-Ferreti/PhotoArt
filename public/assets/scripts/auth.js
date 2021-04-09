@@ -10,6 +10,18 @@ if (page) {
     const registerForm = page.querySelector('form#form-register');
     const auth = firebase.auth();
 
+    const validateLoginForm = (email, password) => {
+        if (email.trim() === '') {
+            createAlert('Preencha o nome', 'danger');
+            return false;
+        }
+        if (password.trim() === '') {
+            createAlert('Preencha o nome', 'danger');
+            return false;
+        }
+        return  true;
+    }
+
     const validateRegisterForm = (email, password, passwordConfirm) => {
         if (email.trim() === '') {
             createAlert('Preencha o nome', 'danger');
@@ -31,13 +43,32 @@ if (page) {
             createAlert('A senha e a confirmação de senha devem ser iguais', 'danger');
             return false;
         }
-
         return true;
     }
     
-    const submitLoginForm = (event) => {
+    const submitLoginForm = async (event) => {
         const form = event.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const submitButtonText = submitButton.innerHTML;
         const { email, password } = getFormValues(form);
+
+        toggleButtonLoader(submitButton);
+
+        if (!validateLoginForm(email, password)) {
+            toggleButtonLoader(submitButton, submitButtonText);
+            return;
+        }
+
+        try {
+            const response = await auth.signInWithEmailAndPassword(email, password)
+
+            console.log(response);
+            console.log(response.user);
+        } catch (error) {
+            console.log(error);
+            createAlert(translateError(error.code), 'danger');
+            toggleButtonLoader(submitButton, submitButtonText);
+        }
     }
 
     const submitRegisterForm = async (event) => {

@@ -133,7 +133,11 @@ export function translateError (message) {
         case 'auth/weak-password':
             return 'A senha deve conter ao menos 6 caracteres'
         case 'auth/email-already-in-use':
-            return 'O endereço de e-mail já está em uso por outra conta'  
+            return 'O endereço de e-mail já está em uso por outra conta'
+        case 'auth/user-not-found':
+            return 'Não há nenhum usuário cadastrado com esse e-mail'
+        case 'auth/wrong-password':
+            return 'E-mail ou senha incorretos'  
         default:
             return 'Erro ao realizar a operação. Por favor, tente novamente'
     }
