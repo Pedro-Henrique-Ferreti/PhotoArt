@@ -125,7 +125,9 @@ if (page) {
     const init = async () => {
         const user = await loadCurrentUser();
 
-        console.log(user);
+        if (user) {
+            window.location.href = '/';
+        }
     }
 
     init();

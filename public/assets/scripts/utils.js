@@ -145,13 +145,10 @@ export function translateError (message) {
 
 export function loadCurrentUser() {
     return new Promise((resolve, reject) => {
-
-        document.body.style.backgroundColor = 'red'
-
         try {
             firebase.auth().onAuthStateChanged(user => {
 
-                document.body.style.backgroundColor = 'azure'
+                document.querySelector('#app-main-loader').classList.remove('show')
                 
                 resolve(user);
             });
