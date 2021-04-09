@@ -1,5 +1,5 @@
 import firebase from './firebase-app';
-import { getFormValues, toggleButtonLoader, createAlert, translateError } from './utils';
+import { getFormValues, toggleButtonLoader, createAlert, translateError, loadCurrentUser } from './utils';
 
 const page = document.querySelector('#auth');
 
@@ -22,9 +22,13 @@ if (page) {
         return  true;
     }
 
-    const validateRegisterForm = (email, password, passwordConfirm) => {
-        if (email.trim() === '') {
+    const validateRegisterForm = (name, email, password, passwordConfirm) => {
+        if (name.trim() === '') {
             createAlert('Preencha o nome', 'danger');
+            return false;
+        }
+        if (email.trim() === '') {
+            createAlert('Preencha o e-mail', 'danger');
             return false;
         }
         if (password.trim() === '') {
@@ -60,12 +64,9 @@ if (page) {
         }
 
         try {
-            const response = await auth.signInWithEmailAndPassword(email, password)
-
-            console.log(response);
-            console.log(response.user);
+            await auth.signInWithEmailAndPassword(email, password)
+            window.location.href = '/'
         } catch (error) {
-            console.log(error);
             createAlert(translateError(error.code), 'danger');
             toggleButtonLoader(submitButton, submitButtonText);
         }
@@ -75,20 +76,20 @@ if (page) {
         const form = event.target;
         const submitButton = form.querySelector('button[type="submit"]');
         const submitButtonText = submitButton.innerHTML;
-        const { email, password, passwordConfirm } = getFormValues(form);
+        const { name, email, password, passwordConfirm } = getFormValues(form);
 
         toggleButtonLoader(submitButton);
         
-        if (!validateRegisterForm(email, password, passwordConfirm)) {
+        if (!validateRegisterForm(name, email, password, passwordConfirm)) {
             toggleButtonLoader(submitButton, submitButtonText);
             return;
         }
 
         try {
-            const response = await auth.createUserWithEmailAndPassword(email, password);
-        
-            window.location.href = "/";
-
+            const { user } = await auth.createUserWithEmailAndPassword(email, password);
+            await user.updateProfile({ displayName: name });
+            
+            window.location.href = '/';
         } catch (error) {
             createAlert(translateError(error.code), 'danger');
             toggleButtonLoader(submitButton, submitButtonText);
@@ -120,4 +121,12 @@ if (page) {
         event.preventDefault();
         submitRegisterForm(event);
     });
+
+    const init = async () => {
+        const user = await loadCurrentUser();
+
+        console.log(user);
+    }
+
+    init();
 }

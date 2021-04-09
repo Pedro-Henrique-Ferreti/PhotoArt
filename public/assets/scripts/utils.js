@@ -142,3 +142,21 @@ export function translateError (message) {
             return 'Erro ao realizar a operação. Por favor, tente novamente'
     }
 }
+
+export function loadCurrentUser() {
+    return new Promise((resolve, reject) => {
+
+        document.body.style.backgroundColor = 'red'
+
+        try {
+            firebase.auth().onAuthStateChanged(user => {
+
+                document.body.style.backgroundColor = 'azure'
+                
+                resolve(user);
+            });
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
