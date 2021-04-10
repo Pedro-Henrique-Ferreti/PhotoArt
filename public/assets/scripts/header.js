@@ -17,8 +17,9 @@ if (header) {
                 const buttonSignIn = header.querySelector('.button-signin');
 
                 buttonSignIn.href = '/auth.html?action=logout'
-
                 buttonSignIn.querySelector('span').innerHTML = 'Sair';
+
+                header.classList.add('login');
             }
         }
     

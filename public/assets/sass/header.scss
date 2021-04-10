@@ -6,6 +6,17 @@
     &.login {
         .container {
             justify-content: center;
+            .menu {
+                nav {
+                    ul {
+                        li {
+                            a.signin {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
         }
     } 
     .container {
@@ -61,6 +72,9 @@
                             text-align: center;
                             display: flex;
                             align-items: center;
+                            &.signin {
+                                display: none;
+                            }
                             &:hover {
                                 color: var(--green);
                             }

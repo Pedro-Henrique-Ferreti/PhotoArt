@@ -122,6 +122,9 @@ body .section-title.page h1 {
 #header.login .container {
   justify-content: center;
 }
+#header.login .container .menu nav ul li a.signin {
+  display: flex;
+}
 #header .container {
   justify-content: space-between;
   align-items: center;
@@ -180,6 +183,9 @@ body .section-title.page h1 {
   text-align: center;
   display: flex;
   align-items: center;
+}
+#header .container .menu nav ul li a.signin {
+  display: none;
 }
 #header .container .menu nav ul li a:hover {
   color: var(--green);
