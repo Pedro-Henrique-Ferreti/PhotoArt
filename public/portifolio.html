@@ -30,8 +30,9 @@
     <link rel="preload" href="assets/css/main.css" as="style">
     <link rel="preload" href="assets/js/app.js" as="script">
     <link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@6.5.0/swiper-bundle.min.css" />
 
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 
@@ -96,6 +97,30 @@
 
     <main>
         <section id="portifolio">
+            <section class="carroussel-wrapper">
+                <div class="carroussel">
+                    <header class="header">
+                        <button type="button" class="button-close" aria-label="Fechar carrossel">
+                            <svg fill="#333" xmlns="http://www.w3.org/2000/svg" width="23.524" height="23.524" viewBox="0 0 23.524 23.524">
+                                <g id="cancel" transform="translate(0 0)">
+                                <g id="Grupo_154" data-name="Grupo 154" transform="translate(0 0)">
+                                    <path id="Caminho_63" data-name="Caminho 63" d="M12.3,11.76,23.413.647a.379.379,0,0,0-.536-.536L11.764,11.223.652.111A.379.379,0,0,0,.116.647L11.228,11.76.116,22.872a.379.379,0,0,0,.527.546l.009-.009L11.764,12.3,22.877,23.408a.379.379,0,0,0,.536-.536Z" transform="translate(0 0)"/>
+                                </g>
+                                </g>
+                            </svg>
+                        </button>
+                    </header>
+                    <div class="content">
+                        <section class="slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </section>
+                        <p class="name"></p>
+                    </div>
+                </div>
+            </section>
             <div class="container">
                 <header class="section-title page">
                     <hr>

@@ -1069,12 +1069,105 @@ form.default .row > div button[type=submit] .app-loader .loader div {
   width: 100%;
   margin-top: calc(var(--space) * 2);
 }
+#portifolio .carroussel-wrapper {
+  display: none;
+  position: fixed;
+  z-index: 7;
+  background-color: rgba(0, 0, 0, 0.16);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#portifolio .carroussel-wrapper.open {
+  display: flex;
+}
+#portifolio .carroussel-wrapper .carroussel {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  max-height: 500px;
+  background-color: var(--white);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+}
+#portifolio .carroussel-wrapper .carroussel .header {
+  width: 100%;
+  justify-content: flex-end;
+}
+#portifolio .carroussel-wrapper .carroussel .header .button-close {
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  width: 20px;
+  height: 20px;
+}
+#portifolio .carroussel-wrapper .carroussel .header .button-close svg {
+  fill: var(--gray-6);
+  transition: all 0.2s ease-in-out;
+}
+#portifolio .carroussel-wrapper .carroussel .header .button-close svg:hover {
+  fill: var(--dark);
+}
+#portifolio .carroussel-wrapper .carroussel .content {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#portifolio .carroussel-wrapper .carroussel .content .slider {
+  width: 100%;
+  max-width: 500px;
+}
+#portifolio .carroussel-wrapper .carroussel .content .slider .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+#portifolio .carroussel-wrapper .carroussel .content .slider .swiper-container .swiper-slide {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 500px;
+}
+#portifolio .carroussel-wrapper .carroussel .content .slider .swiper-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+#portifolio .carroussel-wrapper .carroussel .content .slider .swiper-pagination {
+  justify-content: center;
+}
+#portifolio .carroussel-wrapper .carroussel .content .slider .swiper-pagination span {
+  width: 12px;
+  height: 12px;
+  opacity: 0.8;
+}
+#portifolio .carroussel-wrapper .carroussel .content .slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--green);
+}
+#portifolio .carroussel-wrapper .carroussel .content .name {
+  margin-bottom: 0;
+  color: var(--dark);
+  font-size: 18px;
+}
 
 .recent-work {
   width: 100%;
   flex-direction: column;
   align-items: center;
   max-width: 375px;
+  flex-wrap: wrap;
 }
 @media (min-width: 600px) {
   .recent-work {
