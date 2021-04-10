@@ -14,7 +14,12 @@ if (header) {
         const init = async () => {
             const user = await loadCurrentUser();
             if (user) {
-                header.querySelector('#login').innerHTML = 'Sair'
+                const buttonSignIn = header.querySelector('.button-signin');
+
+                buttonSignIn.href = '/auth.html?action=logout'
+                buttonSignIn.querySelector('span').innerHTML = 'Sair';
+
+                header.classList.add('login');
             }
         }
     

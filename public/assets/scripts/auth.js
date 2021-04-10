@@ -1,5 +1,5 @@
 import firebase from './firebase-app';
-import { getFormValues, toggleButtonLoader, createAlert, translateError, loadCurrentUser } from './utils';
+import { getFormValues, toggleButtonLoader, createAlert, translateError, loadCurrentUser, getQueryString } from './utils';
 
 const page = document.querySelector('#auth');
 
@@ -124,8 +124,14 @@ if (page) {
 
     const init = async () => {
         const user = await loadCurrentUser();
+        const logoutUser = Boolean(getQueryString().action);
 
-        if (user) {
+        if (user && logoutUser) { 
+
+            auth.signOut();
+
+        } else if (user && !logoutUser) {
+            
             window.location.href = '/';
         }
     }

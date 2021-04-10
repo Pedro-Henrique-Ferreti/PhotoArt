@@ -6,6 +6,17 @@
     &.login {
         .container {
             justify-content: center;
+            .menu {
+                nav {
+                    ul {
+                        li {
+                            a.signin {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
         }
     } 
     .container {
@@ -42,35 +53,64 @@
             }
             nav { 
                 padding: var(--space);
+                flex-direction: column;
                 ul {
                     width: 100%;
                     flex-direction: column;
                     align-items: center;
                     li {
                         margin-bottom: 30px;
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
+                        width: 100%;
+                        justify-content: center;
                         a {
                             color: var(--dark);
                             font-size: 17px;
                             text-decoration: none;
                             cursor: pointer;
                             transition: color .25s ease-in-out;
+                            width: 100%;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            &.signin {
+                                display: none;
+                            }
                             &:hover {
                                 color: var(--green);
                             }
-                            &.active {
-                                color: var(--green);
-                                font-weight: 600;
+                            > div {
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                color: var(--dark);
+                                margin-right: 5px;
+                                background-color: var(--green);
+                                display: none;
                             }
-                            &.button {
-                                @include call-to-action;
+                            &.active {
+                                font-weight: 600;
+                                color: var(--green);
+                                > div {
+                                    display: flex;
+                                }
                             }
                         }
                     }
                 }
-                
+                .user-controls {
+                    justify-content: center;
+                    .button-signin {
+                        @include call-to-action;
+                        min-width: 100px;
+                        max-width: 120px;
+                        svg {
+                            fill: #FFF;
+                            margin-right: 10px;
+                            width: 20px;
+                            height: auto;
+                        }
+                    }
+                }
             }
         }
         .mobile-buttons {
@@ -98,23 +138,34 @@
                 z-index: initial;
                 background-color: initial;
                 height: initial;
-                width: initial;
+                margin-left: var(--space);
                 header {
                     display: none;
                 }
                 nav {
                     padding: initial;
                     width: initial;
+                    flex-direction: row;
                     ul {
                         flex-direction: row;
-                        justify-content: space-between;
+                        justify-content: center;
+                        width: fit-content;
+                        flex-grow: 1;
                         li {
                             margin-bottom: 0;
                             margin-left: 30px;
+                            width: initial;
                             &:first-child {
                                 margin-left: 0;
                             }
+                            a {
+                                width: initial;
+                            }
                         }
+                    }
+                    .user {
+                        min-width: 230px;
+                        justify-content: flex-end;
                     }
                 }
             }
