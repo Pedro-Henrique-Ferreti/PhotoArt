@@ -107,6 +107,67 @@
                     text-transform: unset;
                     max-width: unset;
                 }
+                .button-forget-password {
+                    @include button;
+                    width: fit-content;
+                    margin: 0 auto;
+                    margin-top: var(--space);
+                    font-size: 18px;
+                    color: var(--blue);
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .modal-reset-password {
+                &.open {
+                    display: flex;
+                }
+                display: none;
+                position: fixed;
+                z-index: 7;
+                background-color: rgba(0, 0, 0, 0.16);
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20px;
+                form.default {
+                    display: flex;
+                    background-color: var(--white);
+                    width: 100%;
+                    max-width: 450px;
+                    border-radius: 10px;
+                    padding: 30px;
+                    header {
+                        margin-bottom: 30px;
+                        position: relative;
+                        .button-close {
+                            position: absolute;
+                            top: -15px;
+                            right: -15px;
+                            @include button;
+                            width: 20px;
+                            height: 20px;
+                            svg {
+                                fill: var(--gray-6);
+                                transition: all 0.2s ease-in-out;
+                                &:hover {
+                                    fill: var(--dark);
+                                }
+                            }
+                        }
+                        .title {
+                            margin: 0 auto;
+                            font-size: 24px;
+                        }
+                    }
+                    .row:last-child > div {
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
     }
