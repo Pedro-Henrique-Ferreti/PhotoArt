@@ -1349,6 +1349,11 @@ form.default .row > div button[type=submit] .app-loader .loader div {
   width: 100%;
   flex-direction: column;
 }
+#detailed-services .details-wrapper {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
 #detailed-services .breadcrumb {
   width: 100%;
   flex-direction: column;
