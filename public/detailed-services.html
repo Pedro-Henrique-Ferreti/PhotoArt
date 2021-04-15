@@ -105,133 +105,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="hire-service">
-                    <h2>Quero contratar este serviço</h2>
-                    <p>
-                        Preencha as informações abaixo para que possamos gerar um orçamento para seu serviço. Você receberá nosso contato com os valores dentro de três dias úteis. 
-                        <br><br>
-                        <b>Atenção</b>: alguns tipos de serviços estão disponíveis somente para certos estados.
-                    </p>
-                    <form class="default">
-                        <section>
-                            <header>
-                                <h3>Informações sobre você</h3>
-                                <hr>
-                            </header>
+                <div class="budget-form">
+                    <h2>Faça um orçamento</h2>
+                    <p>Não perca tempo! Solicite um orçamento para a PhotoArt e obtenha a melhor qualidade na entrega do serviço desejado.</p>
 
-                            <div class="row">
-                                <div>
-                                    <input type="text" name="name" placeholder="Nome completo" aria-label="Nome">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div>
-                                    <input type="text" name="company" placeholder="Nome da sua empresa" aria-label="Empresa">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div>
-                                    <input type="email" name="email" placeholder="Email para contato" aria-label="Email">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div>
-                                    <input type="tel" name="phone" placeholder="Telefone" aria-label="Telefone">
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <header>
-                                <h3>Informações sobre o evento</h3>
-                                <hr>
-                            </header>
-                            <div class="row">
-                                <div>
-                                    <select name="event" aria-label="Tipo do Evento">
-                                        <option value="" disabled selected hidden>Tipo de evento</option>
-                                        <option value="1">Festa empresarial</option>
-                                        <option value="2">Casamento</option>
-                                        <option value="3">Festa de aniversário</option>
-                                        <option value="4">Reunião religiosa</option>
-                                        <option value="5">Apresentação musical</option>
-                                        <option value="6">Outro</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div>
-                                    <input type="text" name="company" placeholder="Local de realização" aria-label="Local">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div>
-                                    <input type="text" name="city" placeholder="Cidade" aria-label="Cidade">
-                                </div>
-                                <div>
-                                    <select name="state" aria-label="Estado">
-                                        <option value="" disabled selected hidden>Estado</option>
-                                        <option value="AC">Acre</option>
-                                        <option value="AL">Alagoas</option>
-                                        <option value="AP">Amapá</option>
-                                        <option value="AM">Amazonas</option>
-                                        <option value="BA">Bahia</option>
-                                        <option value="CE">Ceará</option>
-                                        <option value="DF">Distrito Federal</option>
-                                        <option value="ES">Espírito Santo</option>
-                                        <option value="GO">Goiás</option>
-                                        <option value="MA">Maranhão</option>
-                                        <option value="MT">Mato Grosso</option>
-                                        <option value="MS">Mato Grosso do Sul</option>
-                                        <option value="MG">Minas Gerais</option>
-                                        <option value="PA">Pará</option>
-                                        <option value="PB">Paraíba</option>
-                                        <option value="PR">Paraná</option>
-                                        <option value="PE">Pernambuco</option>
-                                        <option value="PI">Piauí</option>
-                                        <option value="RJ">Rio de Janeiro</option>
-                                        <option value="RN">Rio Grande do Norte</option>
-                                        <option value="RS">Rio Grande do Sul</option>
-                                        <option value="RO">Rondônia</option>
-                                        <option value="RR">Roraima</option>
-                                        <option value="SC">Santa Catarina</option>
-                                        <option value="SP">São Paulo</option>
-                                        <option value="SE">Sergipe</option>
-                                        <option value="TO">Tocantins</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div>
-                                    <input type="text" name="date" placeholder="Data de realização" aria-label="Data">
-                                    <div class="checkbox">
-                                        <div>
-                                            <input type="checkbox" name="no-date" id="no-date" aria-label="Nenhuma Data">
-                                        </div>
-                                        <label for="no-date">Ainda não defini a data</label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <select name="hours" aria-label="Duração">
-                                        <option value="" disabled selected hidden>Duração prevista</option>
-                                        <option value="1">1 hora</option>
-                                        <option value="2">2 horas</option>
-                                        <option value="3">3 horas</option>
-                                        <option value="4">4 horas</option>
-                                        <option value="5">5 horas</option>
-                                        <option value="6">+ 5 horas</option>
-                                    </select>
-                                    <div class="checkbox">
-                                        <div>
-                                            <input type="checkbox" name="more-days" id="more-days" aria-label="Mais Dias">
-                                        </div>
-                                        <label for="more-days">Este evento ocorrerá por mais de 1 dia</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                    <form class="default">
                         <div class="row">
                             <div>
-                                <button type="submit">Solicitar Orçamento</button>
+                                <input type="text" name="name" placeholder="Seu nome" aria-label="Nome">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <input type="email" name="email" placeholder="Seu email" aria-label="Email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <button type="submit">Entrar em Contato</button>
                             </div>
                         </div>
                     </form>
