@@ -5,6 +5,7 @@ import './detailed-services';
 import './portifolio';
 import './contact';
 import './auth';
+import './account';
 import './header';
 import './footer';
 import './budget-form';

@@ -1,0 +1,75 @@
+#user-account {
+    .container {
+        flex-direction: column;
+        max-width: 600px;
+    }
+    .header {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 600px;
+        flex-direction: column;
+        align-items: center;
+        .picture {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: var(--blue);
+            font-size: 26px;
+            color: var(--white);
+            justify-content: center;
+            align-items: center;
+        }
+        .welcome-message {
+            font-size: 26px;
+            color: var(--dark);
+        }
+        .email {
+            color: #6e6e6e;
+        }
+    }
+    .form-toggler {
+        width: 100%;
+        height: 45px;
+        margin: 30px 0;
+        li {
+            width: 50%;
+            height: inherit;
+            background-color: var(--gray-2);
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            &.active {
+                background-color: var(--green);
+                color: var(--white);
+            }
+        }
+    }
+    .account-page {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        &.active {
+            display: flex;
+        }
+        form.default {
+            label {
+                color: var(--dark);
+                font-weight: 600;
+                input {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}

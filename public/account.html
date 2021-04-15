@@ -93,7 +93,45 @@
     </header>
 
     <main id="user-account">
+        <div class="container">
+            <header class="header">
+                <div class="picture">P</div>
+                <h1 class="welcome-message">Pedro Henrique Ferreti de Souza</h1>
+                <span class="email">phfs28@gmail.com</span>
+            </header>
+            <ul class="form-toggler">
+                <li class="login" data-section="user-data">Dados da Conta</li>
+                <li class="register active" data-section="change-password">Trocar senha</li>
+            </ul>
+            <section class="account-page" id="user-data">
 
+            </section>
+            <section class="account-page active" id="change-password">
+                <form class="default" id="form-alter-password">
+                    <div class="row">
+                        <div>
+                            <label>
+                                Nova senha:
+                                <input type="password" name="password" placeholder="Nova senha" aria-label="Senha" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label>
+                                Repita a nova senha:
+                                <input type="password" name="passwordRepeat" placeholder="Repita a senha" aria-label="Senha" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button type="submit">Trocar senha</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
 
     <footer id="footer">
