@@ -8,7 +8,13 @@ if (page) {
     const loginForm = page.querySelector('form#form-login');
     const registerButton = page.querySelector('.form-toggler li.register');
     const registerForm = page.querySelector('form#form-register');
+    const resetPasswordButton = page.querySelector('.button-forget-password');
+    const resetPasswordForm = page.querySelector('form#form-reset-password');
     const auth = firebase.auth();
+
+    const toggleResetPasswordForm = () => {
+        page.querySelector('.modal-reset-password').classList.toggle('open');
+    }
 
     const validateLoginForm = (email, password) => {
         if (email.trim() === '') {
@@ -45,6 +51,18 @@ if (page) {
         }
         if (password !== passwordConfirm) {
             createAlert('A senha e a confirmação de senha devem ser iguais', 'danger');
+            return false;
+        }
+        return true;
+    }
+
+    const validateResetPasswordForm = (email) => {
+        if (email.trim() === '') {
+            createAlert('Preencha o e-mail', 'danger');
+            return false;
+        }
+        if (!email.includes('@')) {
+            createAlert('O endereço de e-mail informado é inválido', 'danger');
             return false;
         }
         return true;
@@ -96,6 +114,31 @@ if (page) {
         }
     }
 
+    const submitResetPasswordForm = async (event) => {
+        const form = event.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const submitButtonText = submitButton.innerHTML;
+        const { email } = getFormValues(form);
+
+        toggleButtonLoader(submitButton);
+
+        if (!validateResetPasswordForm(email)) {
+            toggleButtonLoader(submitButton, submitButtonText);
+            return;
+        }
+
+        try {
+            await auth.sendPasswordResetEmail(email);
+            createAlert('Instruções para recuperar a senha foram enviadas para o seu e-mail', 'success');
+            toggleButtonLoader(submitButton, submitButtonText);
+            toggleResetPasswordForm();
+
+        } catch (error) {
+            createAlert(translateError(error.code), 'danger');
+            toggleButtonLoader(submitButton, submitButtonText);
+        }
+    }
+
     loginButton.addEventListener('click', () => {
         loginButton.classList.add('active');
         loginForm.classList.add('show');
@@ -112,6 +155,9 @@ if (page) {
         registerForm.classList.add('show');
     });
 
+    resetPasswordButton.addEventListener('click', toggleResetPasswordForm);
+    resetPasswordForm.querySelector('.button-close').addEventListener('click', toggleResetPasswordForm);
+
     loginForm.addEventListener('submit', event => {
         event.preventDefault();
         submitLoginForm(event);
@@ -120,6 +166,11 @@ if (page) {
     registerForm.addEventListener('submit', event => {
         event.preventDefault();
         submitRegisterForm(event);
+    });
+
+    resetPasswordForm.addEventListener('submit', event => {
+        event.preventDefault();
+        submitResetPasswordForm(event);
     });
 
     const init = async () => {

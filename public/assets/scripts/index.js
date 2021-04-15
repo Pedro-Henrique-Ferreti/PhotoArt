@@ -1,6 +1,7 @@
 import './utils';
 import './home';
 import './services';
+import './detailed-services';
 import './portifolio';
 import './contact';
 import './auth';

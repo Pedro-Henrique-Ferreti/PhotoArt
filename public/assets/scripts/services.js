@@ -14,6 +14,7 @@ if (page) {
             categories.forEach(category => {
                 if (service.categoryId === category.id) {
                     data.push({
+                        id: service.id,
                         name: service.name,
                         category: category.name,
                         photo: service.photo,
@@ -43,7 +44,7 @@ if (page) {
                 <h3>${service.name}</h3>
                 <p>${service.description}</p>
                 <div class="buttons">
-                    <a href="#">Detalhes</a>
+                    <a href="/detailed-services.html?id=${service.id}">Detalhes</a>
                 </div>
             </div>
         `;

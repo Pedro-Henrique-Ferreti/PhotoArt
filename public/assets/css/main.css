@@ -1349,6 +1349,11 @@ form.default .row > div button[type=submit] .app-loader .loader div {
   width: 100%;
   flex-direction: column;
 }
+#detailed-services .details-wrapper {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
 #detailed-services .breadcrumb {
   width: 100%;
   flex-direction: column;
@@ -1663,6 +1668,83 @@ form.default .row > div button[type=submit] .app-loader .loader div {
 #auth .forms .content form.default button[type=submit] {
   text-transform: unset;
   max-width: unset;
+}
+#auth .forms .content form.default .button-forget-password {
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: var(--space);
+  font-size: 18px;
+  color: var(--blue);
+}
+#auth .forms .content form.default .button-forget-password:hover {
+  text-decoration: underline;
+}
+#auth .forms .content .modal-reset-password {
+  display: none;
+  position: fixed;
+  z-index: 7;
+  background-color: rgba(0, 0, 0, 0.16);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+#auth .forms .content .modal-reset-password.open {
+  display: flex;
+}
+#auth .forms .content .modal-reset-password form.default {
+  display: flex;
+  background-color: var(--white);
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  padding: 30px;
+}
+#auth .forms .content .modal-reset-password form.default header {
+  margin-bottom: 30px;
+  position: relative;
+}
+#auth .forms .content .modal-reset-password form.default header .button-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  width: 20px;
+  height: 20px;
+}
+#auth .forms .content .modal-reset-password form.default header .button-close svg {
+  fill: var(--gray-6);
+  transition: all 0.2s ease-in-out;
+}
+#auth .forms .content .modal-reset-password form.default header .button-close svg:hover {
+  fill: var(--dark);
+}
+#auth .forms .content .modal-reset-password form.default header .title {
+  margin: 0 auto;
+  font-size: 24px;
+}
+#auth .forms .content .modal-reset-password form.default .row:last-child > div {
+  margin-bottom: 0;
 }
 
 #error-404 .container {

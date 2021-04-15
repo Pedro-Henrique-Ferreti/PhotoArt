@@ -2,6 +2,11 @@
     margin-top: calc(var(--space) * 3);
     width: 100%;
     flex-direction: column;
+    .details-wrapper {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
     .breadcrumb {
         width: 100%;
         flex-direction: column;

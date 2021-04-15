@@ -30,8 +30,6 @@
     <link rel="preload" href="assets/css/main.css" as="style">
     <link rel="preload" href="assets/js/app.js" as="script">
     <link rel="stylesheet" href="assets/css/main.css">
-
-    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
     <header id="header" class="login">
@@ -76,6 +74,7 @@
                         <div class="row">
                             <div>
                                 <button type="submit">Entrar</button>
+                                <button type="button" class="button-forget-password">Esqueceu a senha?</button>
                             </div>
                         </div>
                     </form>
@@ -119,6 +118,36 @@
                             </div>
                         </div>
                     </form>
+
+                    <div class="modal-reset-password">
+                        <form class="default" id="form-reset-password">
+                            <header class="row">
+                                <h2 class="title">Criar uma nova senha</h2>
+                                <button type="button" class="button-close" aria-label="Fechar carrossel">
+                                    <svg fill="#333" xmlns="http://www.w3.org/2000/svg" width="23.524" height="23.524" viewBox="0 0 23.524 23.524">
+                                        <g id="cancel" transform="translate(0 0)">
+                                        <g id="Grupo_154" data-name="Grupo 154" transform="translate(0 0)">
+                                            <path id="Caminho_63" data-name="Caminho 63" d="M12.3,11.76,23.413.647a.379.379,0,0,0-.536-.536L11.764,11.223.652.111A.379.379,0,0,0,.116.647L11.228,11.76.116,22.872a.379.379,0,0,0,.527.546l.009-.009L11.764,12.3,22.877,23.408a.379.379,0,0,0,.536-.536Z" transform="translate(0 0)"/>
+                                        </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </header>
+                            <div class="row">
+                                <div>
+                                    <label>
+                                        E-mail:
+                                        <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <button type="submit">Enviar instruções para recuperar senha</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
         </div>
