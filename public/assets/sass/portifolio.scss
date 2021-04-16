@@ -123,6 +123,9 @@
         text-decoration: none;
         cursor: pointer;
         margin-bottom: var(--space);
+        span {
+            text-align: center;
+        }
         img {
             width: 100%;
             height: auto;
@@ -131,7 +134,7 @@
             border-radius: 10px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
             &:hover {
-                transform: scale(1.05)
+                transform: scale(1.05);
             }
         }
     }

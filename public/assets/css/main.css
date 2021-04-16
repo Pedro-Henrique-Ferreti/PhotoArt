@@ -1199,6 +1199,9 @@ form.default .row > div button[type=submit] .app-loader .loader div {
   cursor: pointer;
   margin-bottom: var(--space);
 }
+.recent-work .card span {
+  text-align: center;
+}
 .recent-work .card img {
   width: 100%;
   height: auto;
@@ -1241,7 +1244,7 @@ form.default .row > div button[type=submit] .app-loader .loader div {
 }
 #our-services .container .service-wrapper .service-card {
   width: 280px;
-  height: 380px;
+  height: 420px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
   background-color: #FFF;
@@ -1411,7 +1414,7 @@ form.default .row > div button[type=submit] .app-loader .loader div {
 }
 #detailed-services .description > div {
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
   flex-direction: column;
   color: var(--dark);
   font-size: 16px;
@@ -1438,57 +1441,14 @@ form.default .row > div button[type=submit] .app-loader .loader div {
   background-color: var(--blue);
   margin-right: 10px;
 }
-#detailed-services .hire-service {
-  width: 100%;
-  max-width: 550px;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  margin-top: var(--space);
-  color: var(--dark);
-}
-#detailed-services .hire-service h2 {
-  font-size: 26px;
-  color: var(--green);
-}
-#detailed-services .hire-service p b {
-  font-weight: 600;
-}
-#detailed-services .hire-service form section {
-  width: 100%;
-  flex-direction: column;
-}
-#detailed-services .hire-service form section header {
-  width: 100%;
-  align-items: center;
-}
-#detailed-services .hire-service form section header h3 {
-  font-size: 22px;
-  color: var(--green);
-}
-#detailed-services .hire-service form section header hr {
-  flex: 1;
-  border: 0;
-  background-color: var(--gray-1);
-  width: 100%;
-  height: 1px;
-  margin-left: var(--space);
-}
-#detailed-services .hire-service form button[type=submit] {
-  align-self: center;
+#detailed-services .budget-form {
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 @media (min-width: 992px) {
   #detailed-services .banner > div {
     height: 100px;
-  }
-  #detailed-services .description {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: initial;
-  }
-  #detailed-services .description > div {
-    max-width: 500px;
   }
 }
 #contact .container {
@@ -1745,6 +1705,78 @@ form.default .row > div button[type=submit] .app-loader .loader div {
 }
 #auth .forms .content .modal-reset-password form.default .row:last-child > div {
   margin-bottom: 0;
+}
+
+#user-account .container {
+  flex-direction: column;
+  max-width: 600px;
+}
+#user-account .header {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+  flex-direction: column;
+  align-items: center;
+}
+#user-account .header .picture {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  font-size: 26px;
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+}
+#user-account .header .name {
+  font-size: 26px;
+  color: var(--dark);
+}
+#user-account .header .email {
+  color: #6e6e6e;
+}
+#user-account .form-toggler {
+  width: 100%;
+  height: 45px;
+  margin: 30px 0;
+}
+#user-account .form-toggler li {
+  width: 50%;
+  height: inherit;
+  background-color: var(--gray-2);
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#user-account .form-toggler li:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#user-account .form-toggler li:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#user-account .form-toggler li.active {
+  background-color: var(--green);
+  color: var(--white);
+}
+#user-account .account-page {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+}
+#user-account .account-page.active {
+  display: flex;
+}
+#user-account .account-page form.default label {
+  color: var(--dark);
+  font-weight: 600;
+}
+#user-account .account-page form.default label input {
+  margin-top: 8px;
 }
 
 #error-404 .container {
