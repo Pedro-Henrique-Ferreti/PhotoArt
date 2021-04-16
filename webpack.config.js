@@ -10,5 +10,5 @@ module.exports = {
     devServer: {
         publicPath: "/assets/js/",
     },
-    devtool: 'eval-source-map'
+    devtool: 'source-map'
 }
