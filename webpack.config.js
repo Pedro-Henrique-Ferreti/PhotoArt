@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './public/assets/scripts/index.js',
     output: {
         filename: 'app.js',
@@ -10,5 +10,5 @@ module.exports = {
     devServer: {
         publicPath: "/assets/js/",
     },
-    devtool: 'eval-source-map'
+    devtool: 'source-map'
 }
