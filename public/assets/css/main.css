@@ -1728,7 +1728,7 @@ form.default .row > div button[type=submit] .app-loader .loader div {
   justify-content: center;
   align-items: center;
 }
-#user-account .header .welcome-message {
+#user-account .header .name {
   font-size: 26px;
   color: var(--dark);
 }
